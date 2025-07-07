@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.main{
+    max-width: 1200px;
+    height: auto;
+}
+
+html{
+        scroll-padding-top: 9rm;
+        scroll-behavior: smooth;
+}
+
+
+.header {
+  position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #b30000;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    
+}
+
+.transaction-history {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+}
+
+.avatar{
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right:30px solid rgb(255, 255, 255);
+}
+
+
+/* Menu bar *****************************************/
+.menu-icon {
+  font-size: 28px;
+  padding: 15px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: #fff;
+}
+
+    .menu {
+  position: fixed;
+  top: 45px;
+  right: -250px;
+  width: 180px;
+  height: 50%;
+  background-color: #b30000;
+  color: white;
+  padding-top: 6px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+
+.menu ul{
+    list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+    .menu ul li {
+        padding: 18px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.863);
+  display: none;
+  z-index: 1000;
+}
+
+#menu-toggle:checked ~ .menu {
+  right: 0;
+}
+
+#menu-toggle:checked ~ .overlay {
+  display: block;
+}
+/*End Menu bar*/
+
+/*Transaction history**************************************/
+.profile-section {
+  text-align: center;
+  background-color: #b30000;
+  height: 250px;
+  border-bottom-left-radius: 100px;
+      border-bottom-right-radius: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: url('img.jpeg') no-repeat center center/cover;
+  border-radius: 50%;
+  margin: 0 auto 10px; 
+}
+
+.profile-section h2 {
+  color: #ffffff;
+  font-size: 22px;
+  height: 50px;
+}
+
+/* Transaction Card */
+.history-card {
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.15);
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction:last-child {
+  border-bottom: none;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.details strong {
+  font-size: 16px;
+}
+
+.details .sub {
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.status {
+  text-align: right;
+}
+
+.status strong {
+  font-size: 16px;
+  display: block;
+  margin-top: 4px;
+}
+
+.sent {
+  color: red;
+  font-size: 14px;
+}
+
+.received {
+  color: green;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin: 30px 20px;
+  color: #333;
+}
+
+footer a {
+  color: red;
+  text-decoration: none;
+}

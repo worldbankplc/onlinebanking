@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Send.css">
+</head>
+<body>
+    <header class="header">
+    <div class="transaction-history">
+
+      <a href="home.html"><div class="avatar"></div></a>
+      <p>Send</p>
+    </div>
+      <nav>
+          <input type="checkbox" id="menu-toggle" hidden />
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <label for="menu-toggle" class="overlay"></label>
+    <nav class="menu">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Transaction.html">Transaction</a><br> History</li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="contact.html">Get Help</a></li>
+          <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+  </header>
+
+<main class="container">
+    <h1>Transfer Money</h1>
+    <p class="subheading">Input Bank Details</p>
+
+    <form class="form" id="transferForm"> 
+      <input type="text" placeholder="Bank Name" />
+      <input type="number" placeholder="Account Number" />
+      <input type="text" placeholder="Beneficiary Name" />
+      <input type="number" placeholder="Amount $" />
+      <input type="text" placeholder="Description" />
+        <button type="submit">Send</button>
+    </form>
+
+<!-- Error message -->
+<div class="error-message" id="errorMessage">Contact customer service</div>
+
+<script>
+  const form = document.getElementById("transferForm");
+    const errorMessage = document.getElementById("errorMessage");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent form submission
+
+    const inputs = form.querySelectorAll("input");
+    let hasInput = false;
+
+    inputs.forEach(input => {
+      if (input.value.trim() !== "") {
+        hasInput = true;
+      }
+    });
+
+    if (hasInput) {
+      alert("Contact customer service");
+      errorMessage.style.color = "red";
+    }
+    
+  });
+</script>
+
+  <footer>
+    <p>Having any problem? <a href="contact.html">Contact us here</a></p>
+    <p>@2025 Internet Banking. (Licensed by World Central Bank)</p>
+  </footer>
+</body>
+  
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="deposit.css">
+</head>
+<body>
+    <header class="header">
+    <div class="transaction-history">
+      <a href="home.html"><div class="avatar"></div></a>
+      <p>Deposit</p>
+    </div>
+      <nav>
+          <input type="checkbox" id="menu-toggle" hidden />
+  <label for="menu-toggle" class="menu-icon">&#9776;</label>
+  <label for="menu-toggle" class="overlay"></label>
+    <nav class="menu">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="Transaction.html">Transaction</a><br> History</li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="contact.html">Get Help</a></li>
+          <li><a href="login.html">Logout</a></li>
+    </ul>
+  </nav>
+  </header>
+
+<main class="container">
+    <h1>Deposit</h1>
+    <p class="subheading">Add money to your account</p>
+
+    <section class="history-card">
+    <!-- Transaction Item -->
+    <div class="transaction">
+      <div class="details">
+        <light>Account Name</light>
+      </div>
+      <div class="status">
+        <light>Dennis Melio</light>
+      </div>
+    </div>
+      
+      <div class="transaction">
+      <div class="details">
+        <light>Account Number</light>
+      </div>
+      <div class="status">
+        <light>0288432697</light>
+      </div>
+      </div>
+
+      <div class="transaction">
+      <div class="details">
+        <light>Bank Name</light>
+      </div>
+      <div class="status">
+        <light>BBVA</light>
+      </div>
+      </div>
+    </section>
+
+<form class="form" id="transferForm"> 
+  <button type="submit" class="card-button">
+    <strong>Card</strong><br>
+    <h6>Add money with your debit card</h6>
+  </button>
+</form>
+
+<script>
+  const form = document.getElementById("transferForm");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+  alert("Contact customer service");
+  });
+</script>
+
+  <footer>
+    <p>Having any problem? <a href="contact.html">Contact us here</a></p>
+    <p>@2025 Internet Banking. (Licensed by World Central Bank)</p>
+  </footer>
+</body>
+  
+</body>
+</html>
